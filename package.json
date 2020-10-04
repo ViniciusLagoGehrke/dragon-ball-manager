@@ -18,11 +18,12 @@
     "theme-ui": "^0.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "REACT_APP_PROFILE=SUCCESS react-scripts start",
     "build": "react-scripts build",
     "test": "jest --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject",
-    "cy:run": "cypress run --headed"
+    "cy:run": "cypress run --headed",
+    "cy:ci": "cypress run -p=3000 --record --key=$CYPRESS_KEY"
   },
   "eslintConfig": {
     "extends": "react-app"
